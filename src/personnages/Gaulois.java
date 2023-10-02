@@ -37,7 +37,7 @@ public class Gaulois {
 	 	 
 	 public void boirePotion(int forcePotion) {
 		 effetPotion = forcePotion;
-		 parler("Merci Druide, je sens que ma force est " + effetPotion + " decuplee");
+		 parler("Merci Druide, je sens que ma force est " + effetPotion + " fois decuplee");
 	 }
 	 
 	public static void main(String[] args) { 

@@ -23,14 +23,24 @@ public class Druide  {
 		return "Le druide " + nom + " : "; 
 	} 
 	
-	private void preparerPotion() {
+	public void preparerPotion() {
 		Random random = new Random();
 		int alea = random.nextInt(effetPotionMin, effetPotionMax);
 		if(alea > 7) {
 			parler("J'ai prepapre une super potion de force " + alea);
+			forcePotion = alea;
 		}
 		else {
 			parler("Je n'ai pas trouve tous les ingredients, ma potion est seulement de force " + alea);
+		}
+	}
+	
+	public void booster(Gaulois gaul) {
+		if (gaul.getNom() == "Obelix") {
+			parler("Non, Obelix!... Tu n'auras pas de potion magique!");
+		}
+		else {
+			gaul.boirePotion(forcePotion);
 		}
 	}
 	
